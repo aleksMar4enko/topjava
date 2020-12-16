@@ -21,7 +21,8 @@
         <th>dateTime</th>
         <th>description</th>
         <th>calories</th>
-        <th>excess</th>
+        <th></th>
+        <th></th>
     </tr>
 
     <c:forEach items="${mealList}" var="meal">
@@ -33,7 +34,8 @@
             </td>
             <td>${meal.description}</td>
             <td>${meal.calories}</td>
-            <td>${meal.excess}</td>
+            <td><a href="meals?action=update&id=${meal.id}">Update</a></td>
+            <td><a href="meals?action=delete&id=${meal.id}">Delete</a></td>
         </tr>
     </c:forEach>
 </table>
